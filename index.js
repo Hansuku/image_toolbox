@@ -158,7 +158,6 @@ export function imgCompress({mode="auto",dataSrouce,dataSrouceType,maxWidth=0,ma
         let originImage = new Image();
         originImage.onload = () => {
             const finalSize = _getResizeSizeImg(originImage);
-            console.log(finalSize)
             _drawToCanvas(originImage,finalSize.width,finalSize.height,originImage.width,originImage.height).then(res => {
                 resolve(res)
             }).catch((err) => {
@@ -167,7 +166,6 @@ export function imgCompress({mode="auto",dataSrouce,dataSrouceType,maxWidth=0,ma
         };
         // switch all external incoming types to Base64
         if(dataSrouceType == "img" || dataSrouceType == "image"){
-            console.log(dataSrouce)
             originImage.src = dataSrouce.src;
         }else if(dataSrouceType == "base64"){
             originImage.src = dataSrouce;
