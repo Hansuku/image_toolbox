@@ -1,4 +1,4 @@
-import { imgFileToBase64 , base64ToBlob , base64ToFile, imgCompress } from '../lib/index' 
+import { imgFileToBase64 , base64ToBlob , base64ToFile, imgCompress } from '../index' 
 
 const inputFile = document.getElementById('input');
 inputFile.addEventListener('change',()=>{
