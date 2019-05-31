@@ -1,5 +1,5 @@
 # image_toolbox
-Web图片工具箱
+Web图片工具箱，提供压缩、编码、转换等函数。
 
 [Here's demo](https://hansuku.github.io/image_toolbox/demo/dist/)
 
