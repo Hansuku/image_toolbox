@@ -1,15 +1,15 @@
-# image_toolbox
+# 🔧image_toolbox
 Web图片工具箱，提供压缩、编码、转换等函数。
 
 [Here's demo](https://hansuku.github.io/image_toolbox/demo/dist/)
 
 > 由于内部使用`new Image()`仅支持在网页环境中使用;小程序/uni-app 等不支持。由于内部使用`Promise`，为保证兼容的情况下您的工程需要有打包工具。
 
-### Install
+### 📦安装
 ```
 npm i image_toolbox
 ```
-### 功能
+### 💻功能
 #### base64ToBlob
 传入 base64 格式的图像转 blob 对象
 通常我们使用这个方法来把 base64的 图片上传至服务器
@@ -73,7 +73,7 @@ imgCompress({
     throw err
 });
 ```
-### 最佳实践
+### 😁最佳实践
 **图片压缩尽量放在服务端做**，只有当不得已的时候比如弱网环境上传速度慢容易导致请求挂掉、服务端限制大小等等情况，才使用 `imgComporess`，前端的图片压缩算法可定制程度太低、效率慢是硬伤。
 
 **默认对 1080 以上图片压缩这个参数是可配置的**，如果想要更加的省事，可以通过修改源码来调整默认阈值。
