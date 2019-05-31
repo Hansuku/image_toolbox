@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>img-tools-demo</title>
+</head>
+<body>
+    <h1>select file</h1>
+    <input type="file" id="input" accept="image/*" />
+    <h1>base64ToBlob: see console</h1>
+    <h1>imgFileToBase64</h1>
+    <div id="imgFileToBase64" style="max-height: 200px;overflow:scroll;word-break:break-all;width: 500px;"></div>
+    <h1>base64ToFile: see console</h1>
+    <h1>imgCompress</h1>
+    <div>
+        <img id="originImg" style="width: 50%;float: left;" />
+        <img id="compressImg" style="width: 50%;" />
+    </div>
+    <h1 id="originSize">origin size : </h1>
+    <h1 id="compressSize">compress size :</h1>
+</body>
+</html>

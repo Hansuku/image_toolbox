@@ -1,0 +1,41 @@
+{
+  "name": "image_toolbox",
+  "version": "1.0.0",
+  "description": "Tools for Processing Web Pictures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "cd demo;webpack-dev-server --mode production --inline --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hansuku/image_toolbox.git"
+  },
+  "keywords": [
+    "images",
+    "tools"
+  ],
+  "author": "HangzhouDayiTech Hansuku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hansuku/image_toolbox/issues"
+  },
+  "homepage": "https://github.com/Hansuku/image_toolbox#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^2.0.0",
+    "ts-loader": "^6.0.1",
+    "typescript": "^3.4.5",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}
