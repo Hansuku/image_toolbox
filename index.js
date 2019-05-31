@@ -114,12 +114,12 @@ export function imgCompress({mode="auto",dataSrouce,dataSrouceType,maxWidth=0,ma
         const originImgWidth = img.width;
         const originImgHeight = img.height;
         const percentScale = parseFloat(originImgWidth / originImgHeight);
-        if(originImgWidth <= 1800 && originImgHeight <= 1800){
+        if(originImgWidth <= 1080 && originImgHeight <= 1080){
             return {width:originImgWidth , height:originImgHeight};
         }
         if(mode == "auto"){
-            let autoWidth = maxWidth == 0 ? 1800 : maxWidth;
-            let autoHeight = maxHeight == 0 ? 1800 : maxHeight;
+            let autoWidth = maxWidth == 0 ? 1080 : maxWidth;
+            let autoHeight = maxHeight == 0 ? 1080 : maxHeight;
             let sizeByMaxWidth = {
                 width: autoWidth,
                 height: parseInt(autoWidth / percentScale)
@@ -136,7 +136,7 @@ export function imgCompress({mode="auto",dataSrouce,dataSrouceType,maxWidth=0,ma
             if(originImgWidth <= maxWidth){
                 return { originImgWidth , originImgHeight };
             }
-            let autoWidth = maxWidth == 0 ? 1800 : maxWidth;
+            let autoWidth = maxWidth == 0 ? 1080 : maxWidth;
             let sizeByMaxWidth = {
                 width: autoWidth,
                 height: parseInt(autoWidth / percentScale)
@@ -146,7 +146,7 @@ export function imgCompress({mode="auto",dataSrouce,dataSrouceType,maxWidth=0,ma
             if(originImgHeight <= maxHeight){
                 return { originImgWidth , originImgHeight };
             }
-            let autoWidth = maxHeight == 0 ? 1800 : maxHeight;
+            let autoWidth = maxHeight == 0 ? 1080 : maxHeight;
             let sizeByMaxHeight = {
                 width: parseInt(autoWidth / percentScale),
                 height: maxHeight,
