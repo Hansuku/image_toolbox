@@ -1,6 +1,6 @@
 {
   "name": "image_toolbox",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tools for Processing Web Pictures",
   "main": "index.js",
   "scripts": {
