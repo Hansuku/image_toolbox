@@ -63,14 +63,14 @@ export function base64ToFile(dataurl, filename){
  *
  * @export
  * @param mode Picture compression mode:auto(Compression in equal proportion to maximum width or height) width(Compression by width) height(Compression by height)
- * @param dataSrouce Data srouce, passing:image/base64/canvas/img file
- * @param dataSrouceType Data srouce type: image/base64/canvas/file
+ * @param dataSource Data source, passing:image/base64/canvas/img file
+ * @param dataSourceType Data source type: image/base64/canvas/file
  * @param maxWidth Maximum width of compression,default: 1080
  * @param maxHeight Maximum height of compression,default: 1080
  * @param quality Picture output quality;Range of values: 0-1 ;default: 0.92;It's useing canvas function:toDataUrl;
  * @returns Promise
  */
-export function imgCompress({mode="auto",dataSrouce,dataSrouceType,maxWidth=0,maxHeight=0,quality=0.92}){
+export function imgCompress({mode="auto",dataSource,dataSourceType,maxWidth=0,maxHeight=0,quality=0.92}){
     /**
      * draw canvas
      *
@@ -165,21 +165,21 @@ export function imgCompress({mode="auto",dataSrouce,dataSrouceType,maxWidth=0,ma
             });
         };
         // switch all external incoming types to Base64
-        if(dataSrouceType == "img" || dataSrouceType == "image"){
-            originImage.src = dataSrouce.src;
-        }else if(dataSrouceType == "base64"){
-            originImage.src = dataSrouce;
-        }else if(dataSrouceType == "canvas"){
-            originImage.src = dataSrouce.toDataUrl("image/jpeg");
-        }else if(dataSrouceType == "file"){
-            imgFileToBase64(dataSrouce).then(res => {
+        if(dataSourceType == "img" || dataSourceType == "image"){
+            originImage.src = dataSource.src;
+        }else if(dataSourceType == "base64"){
+            originImage.src = dataSource;
+        }else if(dataSourceType == "canvas"){
+            originImage.src = dataSource.toDataUrl("image/jpeg");
+        }else if(dataSourceType == "file"){
+            imgFileToBase64(dataSource).then(res => {
                 originImage.src = res;
             }).catch(err => {
                 throw err
             });
         }else{
-            console.log('unknow type:'+dataSrouceType)
-            reject('unknow type:'+dataSrouceType)
+            console.log('unknow type:'+dataSourceType)
+            reject('unknow type:'+dataSourceType)
         }
     })
 }
